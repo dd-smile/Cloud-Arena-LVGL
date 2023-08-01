@@ -1,0 +1,1987 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Jul  5 10:08:51 2023
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+SSH_AGENT_LAUNCHER = gnome-keyring
+# makefile (from 'Makefile', line 47)
+OBJEXT = .o
+# makefile (from '/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/widgets/lv_widgets.mk', line 18)
+VPATH = :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/core :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/arm2d :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/nxp_pxp :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/nxp_vglite :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sdl :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/stm32_dma2d :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/swm341_dma2d :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/font :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/misc :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/widgets
+# environment
+LC_NAME = zh_CN.UTF-8
+# environment
+LC_NUMERIC = zh_CN.UTF-8
+# environment
+VSCODE_CWD = /home/mai
+# environment
+AWTK_SDK_PATH = /usr/share/AWStudio/AWTK/SDK
+# makefile (from 'Makefile', line 20)
+LIBS := -Wl,-Bdynamic -ljpeg -lz  -lmi_disp -lmi_panel  -lmi_gfx -lmi_sys -lmi_common -ldl  -Wl,-Bdynamic -lstdc++ -ldl  -lcurl   -lavformat -lavcodec -lavutil -lswscale  -lcurl  -lm -lz -lpthread -lmi_common -lmi_sys -lmi_wlan -lcjson -Wl,--hash-style=gnu 
+# environment
+NVM_DIR = /home/mai/.nvm
+# environment
+LC_ADDRESS = zh_CN.UTF-8
+# default
+MAKE_COMMAND := make
+# makefile (from 'Makefile', line 27)
+LVGL_DIR = ${shell pwd}
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# makefile (from '/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_node/lv_node.mk', line 1)
+CSRCS = lv_disp.c lv_group.c lv_indev.c lv_indev_scroll.c lv_obj.c lv_obj_class.c lv_obj_draw.c lv_obj_pos.c lv_obj_scroll.c lv_obj_style.c lv_obj_style_gen.c lv_obj_tree.c lv_event.c lv_refr.c lv_theme.c lv_draw_arc.c lv_draw.c lv_draw_img.c lv_draw_label.c lv_draw_line.c lv_draw_mask.c lv_draw_rect.c lv_draw_transform.c lv_draw_triangle.c lv_img_buf.c lv_img_cache.c lv_img_decoder.c lv_gpu_arm2d.c lv_gpu_nxp_pxp.c lv_gpu_nxp_pxp_osa.c lv_gpu_nxp_vglite.c lv_draw_sdl.c lv_draw_sdl_arc.c lv_draw_sdl_bg.c lv_draw_sdl_composite.c lv_draw_sdl_img.c lv_draw_sdl_label.c lv_draw_sdl_line.c lv_draw_sdl_mask.c lv_draw_sdl_polygon.c lv_draw_sdl_rect.c lv_draw_sdl_stack_blur.c lv_draw_sdl_texture_cache.c lv_draw_sdl_utils.c lv_gpu_stm32_dma2d.c lv_draw_sw.c lv_draw_sw_arc.c lv_draw_sw_blend.c lv_draw_sw_dither.c lv_draw_sw_gradient.c lv_draw_sw_img.c lv_draw_sw_letter.c lv_draw_sw_line.c lv_draw_sw_polygon.c lv_draw_sw_rect.c lv_draw_sw_transform.c lv_gpu_swm341_dma2d.c $(shell find -L $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/extra -name \*.c) lv_font.c lv_font_fmt_txt.c lv_font_loader.c lv_font_dejavu_16_persian_hebrew.c lv_font_montserrat_8.c lv_font_montserrat_10.c lv_font_montserrat_12.c lv_font_montserrat_12_subpx.c lv_font_montserrat_14.c lv_font_montserrat_16.c lv_font_montserrat_18.c lv_font_montserrat_20.c lv_font_montserrat_22.c lv_font_montserrat_24.c lv_font_montserrat_26.c lv_font_montserrat_28.c lv_font_montserrat_28_compressed.c lv_font_montserrat_30.c lv_font_montserrat_32.c lv_font_montserrat_34.c lv_font_montserrat_36.c lv_font_montserrat_38.c lv_font_montserrat_40.c lv_font_montserrat_42.c lv_font_montserrat_44.c lv_font_montserrat_46.c lv_font_montserrat_48.c lv_font_simsun_16_cjk.c lv_font_unscii_8.c lv_font_unscii_16.c lv_hal_disp.c lv_hal_indev.c lv_hal_tick.c lv_anim.c lv_anim_timeline.c lv_area.c lv_async.c lv_bidi.c lv_color.c lv_fs.c lv_gc.c lv_ll.c lv_log.c lv_lru.c lv_math.c lv_mem.c lv_printf.c lv_style.c lv_style_gen.c lv_timer.c lv_tlsf.c lv_txt.c lv_txt_ap.c lv_utils.c lv_arc.c lv_bar.c lv_btn.c lv_btnmatrix.c lv_canvas.c lv_checkbox.c lv_dropdown.c lv_img.c lv_label.c lv_line.c lv_roller.c lv_slider.c lv_switch.c lv_table.c lv_textarea.c $(wildcard $(LVGL_DIR)/$(LV_DRIVERS_DIR_NAME)/*.c) $(wildcard $(LVGL_DIR)/$(LV_DRIVERS_DIR_NAME)/wayland/*.c) $(wildcard $(LVGL_DIR)/$(LV_DRIVERS_DIR_NAME)/indev/*.c) $(wildcard $(LVGL_DIR)/$(LV_DRIVERS_DIR_NAME)/gtkdrv/*.c) $(wildcard $(LVGL_DIR)/$(LV_DRIVERS_DIR_NAME)/display/*.c) $(shell find -L lv_examples -name "*.c") $(shell find -L lv_node -name "*.c")
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# makefile (from 'Makefile', line 5)
+PWD = `pwd`
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/mai/.config/Code/CachedData/129500ee4c8ab7263461ffe327268ba56b9f210d
+# environment
+LANG = C
+# makefile (from 'Makefile', line 11)
+SDK_INCS = ../../project/release/include
+# environment
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.F25961
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR -j12 --jobserver-auth=3,4
+# makefile (from 'Makefile', line 6)
+SDK_LIBS = ../../project/release/nvr/i2m/common/glibc/8.2.1/mi_libs/dynamic
+# environment
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=fe2b76a7253db414b1309fc6649d20f3
+# makefile
+CURDIR := /home/mai/code/lvgl/code/test/LVGL8.2_compile
+# makefile (from 'Makefile', line 12)
+UAPI_INCS = ../../project/kbuild/4.9.84/i2m/include/uapi/mstar
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# makefile (from 'Makefile', line 54)
+SRCS = $(ASRCS) $(CSRCS) $(MAINSRC)
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR -j12 --jobserver-auth=3,4
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# makefile (from 'Makefile', line 8)
+PLAT_DEPENDENT_LIB = -lmi_gfx -lmi_sys -lmi_common -ldl 
+# makefile (from '/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/widgets/lv_widgets.mk', line 17)
+DEPPATH = --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/core --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/arm2d --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/nxp_pxp --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/nxp_vglite --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sdl --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/stm32_dma2d --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/swm341_dma2d --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/font --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/misc --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/widgets
+# environment
+WAYLAND_DISPLAY = wayland-0
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# makefile (from '/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_node/lv_node.mk', line 1)
+MAKEFILE_LIST := Makefile /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/lvgl.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/core/lv_core.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/lv_draw.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/arm2d/lv_draw_arm2d.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/nxp_pxp/lv_draw_nxp_pxp.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/nxp_vglite/lv_draw_nxp_vglite.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/sdl/lv_draw_sdl.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/stm32_dma2d/lv_draw_stm32_dma2d.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/sw/lv_draw_sw.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/swm341_dma2d/lv_draw_swm341_dma2d.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/lv_extra.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/font/lv_font.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/hal/lv_hal.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/misc/lv_misc.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/widgets/lv_widgets.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/lv_drivers.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_examples/lv_examples.mk /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_node/lv_node.mk
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 491949
+# environment
+XDG_SESSION_TYPE = wayland
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 13)
+INCLUDES = ./common
+# environment
+SESSION_MANAGER = local/mai:@/tmp/.ICE-unix/2432,unix/mai:/tmp/.ICE-unix/2432
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=fe2b76a7253db414b1309fc6649d20f3
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"d12f895d31d9f9b0d093ad4fb7402f51.zh-cn","_translationsConfigFile":"/home/mai/.config/Code/clp/d12f895d31d9f9b0d093ad4fb7402f51.zh-cn/tcf.json","_cacheRoot":"/home/mai/.config/Code/clp/d12f895d31d9f9b0d093ad4fb7402f51.zh-cn","_resolvedLanguagePackCoreLocation":"/home/mai/.config/Code/clp/d12f895d31d9f9b0d093ad4fb7402f51.zh-cn/129500ee4c8ab7263461ffe327268ba56b9f210d","_corruptedFile":"/home/mai/.config/Code/clp/d12f895d31d9f9b0d093ad4fb7402f51.zh-cn/corrupted.info","_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'Makefile', line 55)
+OBJS = $(AOBJS) $(COBJS)
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+LD_LIBRARY_PATH = :/your/path
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# environment
+IM_CONFIG_CHECK_ENV = 1
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/mai/.local/bin:/home/mai/gcc-arm-8.2-2018.08-x86_64-arm-linuxgnueabihf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mai/gcc-arm-8.2-2018.08-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc\n:/snap/bin
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = zh_CN:en_US:en
+# makefile (from 'Makefile', line 34)
+MAINSRC = ./main.c
+# environment
+LC_MONETARY = zh_CN.UTF-8
+# automatic
+^F = $(notdir $^)
+# environment
+LC_TIME = zh_CN.UTF-8
+# environment
+INVOCATION_ID = 7e3590dd97584192943e996227aa0458
+# environment
+USERNAME = mai
+# environment
+GNOME_SETUP_DISPLAY = :1
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+LC_TELEPHONE = zh_CN.UTF-8
+# automatic
+?F = $(notdir $?)
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+LS_COLORS = 
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = ubuntu
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = mai
+# makefile (from 'Makefile', line 26)
+LVGL_DIR_NAME = lvgl
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# makefile (from 'Makefile', line 7)
+SDK_LIBS_STATIC = $(patsubst %dynamic,%static,$(SDK_LIBS))
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 2432
+# environment
+DISPLAY = :0
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+USER = mai
+# default
+MAKE_VERSION := 4.3
+# makefile (from 'Makefile', line 9)
+PLAT_DEPENDENT_LIB_EX = -lmi_disp -lmi_panel 
+# 'override' directive
+.SHELLSTATUS := 0
+# makefile (from 'Makefile', line 29)
+LDFLAGS = -L$(SDK_LIBS)  -L$(SDK_LIBS_STATIC)  -L$(PWD)/lib -L/usr/local/lib  -L./lib $(LIBS)  
+# environment
+MANAGERPID = 2296
+# environment
+DBUS_STARTER_BUS_TYPE = session
+# environment
+LC_MEASUREMENT = zh_CN.UTF-8
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 513282
+# environment
+_ = /usr/bin/make
+# environment
+LC_PAPER = zh_CN.UTF-8
+# makefile (from 'Makefile', line 30)
+BIN = demossd
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from '/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/widgets/lv_widgets.mk', line 20)
+CFLAGS = -rdynamic -funwind-tables -I. -I$(SDK_INCS) -I$(PWD)/inc -I$(UAPI_INCS) -I$(INCLUDES) -O3 -g0 -I$(LVGL_DIR)/ -Wall -Wshadow -Wundef -Wmaybe-uninitialized -Wmissing-prototypes -Wall -Wextra -Wno-unused-function -Wundef -Wno-error=strict-prototypes -Wpointer-arith -fno-strict-aliasing -Wno-error=cpp -Wuninitialized -Wmaybe-uninitialized -Wno-unused-parameter -Wno-missing-field-initializers -Wtype-limits -Wsizeof-pointer-memaccess -Wno-format-nonliteral -Wno-cast-qual -Wunreachable-code -Wno-switch-default -Wno-switch-enum -Wreturn-type -Wmultichar -Wformat-security -Wno-ignored-qualifiers -Wno-error=pedantic -Wno-sign-compare -Wno-error=missing-prototypes -Wdouble-promotion -Wclobbered -Wdeprecated -Wempty-body -Wtype-limits -Wstack-usage=1024 -Wno-unused-value -Wno-unused-parameter -Wno-missing-field-initializers -Wuninitialized -Wmaybe-uninitialized -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wtype-limits -Wsizeof-pointer-memaccess -Wno-format-nonliteral -Wpointer-arith -Wno-cast-qual -Wmissing-prototypes -Wunreachable-code -Wno-switch-default -Wswitch-enum -Wreturn-type -Wmultichar -Wformat-security -Wno-ignored-qualifiers -Wno-sign-compare  "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/core" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/arm2d" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/nxp_pxp" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/nxp_vglite" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sdl" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/stm32_dma2d" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/swm341_dma2d" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/font" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/misc" "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/widgets"
+# environment
+NVM_RC_VERSION = 
+# environment
+NVM_CD_FLAGS = 
+# environment
+JOURNAL_STREAM = 8:31282
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# makefile (from 'Makefile', line 50)
+COBJS = $(CSRCS:.c=$(OBJEXT))
+# makefile (from 'Makefile', line 52)
+MAINOBJ = $(MAINSRC:.c=$(OBJEXT))
+# environment
+HOME = /home/mai
+# environment
+QT_IM_MODULE = ibus
+# makefile (from '/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/lv_drivers.mk', line 1)
+LV_DRIVERS_DIR_NAME = lv_drivers
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-0797fa5d-1.72.1-main.sock
+ 
+# environment
+IM_CONFIG_PHASE = 1
+# environment
+PAPERSIZE = a4
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 24)
+CC := arm-linux-gnueabihf-gcc
+# makefile (from 'Makefile', line 10)
+MINIGUI_LIBS = -ljpeg -lz 
+# makefile (from 'Makefile', line 49)
+AOBJS = $(ASRCS:.S=$(OBJEXT))
+# environment
+XDG_MENU_PREFIX = gnome-
+# makefile (from 'Makefile', line 19)
+STDLIBS := -lstdc++ -ldl  -lcurl   -lavformat -lavcodec -lavutil -lswscale  -lcurl  -lm -lz -lpthread -lmi_common -lmi_sys -lmi_wlan -lcjson -Wl,--hash-style=gnu 
+# environment
+GDMSESSION = ubuntu
+# environment
+LC_IDENTIFICATION = zh_CN.UTF-8
+# variable set hash-table stats:
+# Load=139/1024=14%, Rehash=0, Collisions=8/880=1%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev (device 2053, inode 5014429): 29 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/gtkdrv (device 2053, inode 5014428): 7 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw (device 2053, inode 5014642): 34 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/core (device 2053, inode 5014641): 33 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/nxp_pxp (device 2053, inode 5014644): 7 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/stm32_dma2d (device 2053, inode 5014647): 5 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/sw (device 2053, inode 5014648): 18 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/hal (device 2053, inode 5021715): 10 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/nxp_vglite (device 2053, inode 5014645): 5 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/arm2d (device 2053, inode 5014643): 5 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers (device 2053, inode 5014424): 20 files, no impossibilities.
+# . (device 2053, inode 4973256): 22 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/misc (device 2053, inode 5014640): 49 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/swm341_dma2d (device 2053, inode 5014649): 5 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/sdl (device 2053, inode 5014646): 26 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/wayland (device 2053, inode 5014431): 8 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/widgets (device 2053, inode 5021716): 35 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display (device 2053, inode 5014426): 36 files, no impossibilities.
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/font (device 2053, inode 5021714): 38 files, no impossibilities.
+
+# 392 files, no impossibilities in 19 directories.
+
+# Implicit Rules
+
+%.o: %.c
+#  recipe to execute (from 'Makefile', line 62):
+	@$(CC)  $(CFLAGS) -c $< -o $@ 
+	@echo "CC $<"
+	# 
+
+# 1 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+lv_bar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_canvas.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gpu_stm32_dma2d.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/lv_node_home.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# 'override' directive
+lv_disp.o: .SHELLSTATUS := 0
+lv_disp.o: /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/core/lv_disp.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lv_disp'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := lv_disp.o
+# automatic
+# * := lv_disp
+# automatic
+# < := /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/core/lv_disp.c
+# automatic
+# + := /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/core/lv_disp.c
+# automatic
+# % := 
+# automatic
+# ^ := /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/core/lv_disp.c
+# automatic
+# ? := /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/core/lv_disp.c
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=9/32=28%, Rehash=0, Collisions=2/103=2%
+#  recipe to execute (from 'Makefile', line 62):
+	@$(CC)  $(CFLAGS) -c $< -o $@ 
+	@echo "CC $<"
+	# 
+
+# Not a target:
+lv_font.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_area.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_rect.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/mousewheel.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_loader.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_roller.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/sdl/lv_draw_sdl.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/home.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_anim.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/AD_touch.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_img_decoder.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_28_compressed.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_img_buf.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_timer.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_ll.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_44.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_triangle.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_btn.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_img_cache.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/qrcode/qrcodegen.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/evdev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/keyboard/lv_keyboard.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/data/running_curve.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_composite.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+ 
+
+# Not a target:
+lv_font_montserrat_28.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/tileview/lv_tileview.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/hal/lv_hal.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/calendar/lv_calendar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_label.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/keyboard.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+default: lv_disp.o lv_group.o lv_indev.o lv_indev_scroll.o lv_obj.o lv_obj_class.o lv_obj_draw.o lv_obj_pos.o lv_obj_scroll.o lv_obj_style.o lv_obj_style_gen.o lv_obj_tree.o lv_event.o lv_refr.o lv_theme.o lv_draw_arc.o lv_draw.o lv_draw_img.o lv_draw_label.o lv_draw_line.o lv_draw_mask.o lv_draw_rect.o lv_draw_transform.o lv_draw_triangle.o lv_img_buf.o lv_img_cache.o lv_img_decoder.o lv_gpu_arm2d.o lv_gpu_nxp_pxp.o lv_gpu_nxp_pxp_osa.o lv_gpu_nxp_vglite.o lv_draw_sdl.o lv_draw_sdl_arc.o lv_draw_sdl_bg.o lv_draw_sdl_composite.o lv_draw_sdl_img.o lv_draw_sdl_label.o lv_draw_sdl_line.o lv_draw_sdl_mask.o lv_draw_sdl_polygon.o lv_draw_sdl_rect.o lv_draw_sdl_stack_blur.o lv_draw_sdl_texture_cache.o lv_draw_sdl_utils.o lv_gpu_stm32_dma2d.o lv_draw_sw.o lv_draw_sw_arc.o lv_draw_sw_blend.o lv_draw_sw_dither.o lv_draw_sw_gradient.o lv_draw_sw_img.o lv_draw_sw_letter.o lv_draw_sw_line.o lv_draw_sw_polygon.o lv_draw_sw_rect.o lv_draw_sw_transform.o lv_gpu_swm341_dma2d.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/lv_extra.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/msgbox/lv_msgbox.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/span/lv_span.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/animimg/lv_animimg.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/win/lv_win.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/meter/lv_meter.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/chart/lv_chart.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/tileview/lv_tileview.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/keyboard/lv_keyboard.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/led/lv_led.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/tabview/lv_tabview.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/menu/lv_menu.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/spinbox/lv_spinbox.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/spinner/lv_spinner.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/list/lv_list.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/calendar/lv_calendar.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/monkey/lv_monkey.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/imgfont/lv_imgfont.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/gridnav/lv_gridnav.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/fragment/lv_fragment_manager.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/fragment/lv_fragment.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/snapshot/lv_snapshot.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/msg/lv_msg.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/rlottie/lv_rlottie.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/png/lodepng.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/png/lv_png.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/qrcode/lv_qrcode.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/qrcode/qrcodegen.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/fsdrv/lv_fs_fatfs.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/fsdrv/lv_fs_stdio.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/fsdrv/lv_fs_win32.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/fsdrv/lv_fs_posix.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/bmp/lv_bmp.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/freetype/lv_freetype.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/gif/gifdec.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/gif/lv_gif.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/sjpg/tjpgd.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/sjpg/lv_sjpg.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/layouts/grid/lv_grid.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/layouts/flex/lv_flex.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/themes/mono/lv_theme_mono.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/themes/basic/lv_theme_basic.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/themes/default/lv_theme_default.o lv_font.o lv_font_fmt_txt.o lv_font_loader.o lv_font_dejavu_16_persian_hebrew.o lv_font_montserrat_8.o lv_font_montserrat_10.o lv_font_montserrat_12.o lv_font_montserrat_12_subpx.o lv_font_montserrat_14.o lv_font_montserrat_16.o lv_font_montserrat_18.o lv_font_montserrat_20.o lv_font_montserrat_22.o lv_font_montserrat_24.o lv_font_montserrat_26.o lv_font_montserrat_28.o lv_font_montserrat_28_compressed.o lv_font_montserrat_30.o lv_font_montserrat_32.o lv_font_montserrat_34.o lv_font_montserrat_36.o lv_font_montserrat_38.o lv_font_montserrat_40.o lv_font_montserrat_42.o lv_font_montserrat_44.o lv_font_montserrat_46.o lv_font_montserrat_48.o lv_font_simsun_16_cjk.o lv_font_unscii_8.o lv_font_unscii_16.o lv_hal_disp.o lv_hal_indev.o lv_hal_tick.o lv_anim.o lv_anim_timeline.o lv_area.o lv_async.o lv_bidi.o lv_color.o lv_fs.o lv_gc.o lv_ll.o lv_log.o lv_lru.o lv_math.o lv_mem.o lv_printf.o lv_style.o lv_style_gen.o lv_timer.o lv_tlsf.o lv_txt.o lv_txt_ap.o lv_utils.o lv_arc.o lv_bar.o lv_btn.o lv_btnmatrix.o lv_canvas.o lv_checkbox.o lv_dropdown.o lv_img.o lv_label.o lv_line.o lv_roller.o lv_slider.o lv_switch.o lv_table.o lv_textarea.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/win_drv.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/wayland/wayland.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/AD_touch.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/FT5406EE8.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/XPT2046.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/evdev.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/keyboard.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/libinput.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/mouse.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/mousewheel.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/xkb.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/gtkdrv/gtkdrv.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/GC9A01.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/ILI9341.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/R61581.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/SHARP_MIP.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/SSD1963.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/ST7565.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/UC1610.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/drm.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/fbdev.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/monitor.o /home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/sstardisp.o lv_examples/src/widgets/lv_demo_widgets.o lv_examples/src/widgets/assets/img_clothes.o lv_examples/src/widgets/assets/img_demo_widgets_avatar.o lv_examples/src/widgets/assets/img_lvgl_logo.o lv_node/image/mon_power.o lv_node/image/home.o lv_node/image/weather.o lv_node/image/running_bg.o lv_node/image/dai_power.o lv_node/image/workimg_battery.o lv_node/image/distribution.o lv_node/image/advanced_obj.o lv_node/image/rectifier.o lv_node/image/quantity.o lv_node/image/jiaoliupeidian.o lv_node/image/battery_ratio.o lv_node/image/work_battery.o lv_node/image/photovoltaic.o lv_node/image/advanced_img.o lv_node/image/battery.o lv_node/image/time_chart.o lv_node/image/home_two.o lv_node/image/work_distribution.o lv_node/image/power.o lv_node/image/system.o lv_node/ui/home/home.o lv_node/ui/home/data.o lv_node/ui/home/event.o lv_node/ui/data/dai_power_generation.o lv_node/ui/data/system_overview.o lv_node/ui/data/device_information.o lv_node/ui/data/mon_power_generation.o lv_node/ui/data/advanced_parameter.o lv_node/ui/data/schedule.o lv_node/ui/data/running_curve.o lv_node/ui/data/working_parameter.o lv_node/ui/data/working_state.o lv_node/fout/PuHuiTi_Regular_20.o lv_node/fout/PuHuiTi_Regular_16.o lv_node/lv_node_home.o main.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/78=0%
+#  recipe to execute (from 'Makefile', line 67):
+	$(CC) -o $(BIN) $(MAINOBJ) $(AOBJS) $(COBJS) $(LDFLAGS) $(FFMPEG_LIB) 
+	mkdir -p $(LVGL_DIR)/obj $(LVGL_DIR)/bin
+	mv *.o $(LVGL_DIR)/obj/
+	mv $(BIN) $(LVGL_DIR)/bin/
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/drm.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/advanced_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/fsdrv/lv_fs_fatfs.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_32.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_label.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_hal_indev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/monitor.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/workimg_battery.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/fout/PuHuiTi_Regular_16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/wayland/wayland.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_blend.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_transform.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_hal_tick.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_14.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/rlottie/lv_rlottie.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_12_subpx.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/system.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_rect.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_polygon.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_transform.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/fragment/lv_fragment.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-11-16 14:45:21
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_draw_sw_dither.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_examples/lv_examples.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-11-16 14:45:21
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/sjpg/tjpgd.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gpu_nxp_pxp_osa.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_tree.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/win/lv_win.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_color.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_24.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_36.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+# Not a target:
+lv_font_montserrat_48.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_tlsf.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_dropdown.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/SSD1963.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/advanced_obj.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_arc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/bmp/lv_bmp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/spinbox/lv_spinbox.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_style.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/stm32_dma2d/lv_draw_stm32_dma2d.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/nxp_pxp/lv_draw_nxp_pxp.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_node/image/rectifier.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/msg/lv_msg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/widgets/lv_widgets.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_node/lv_node.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-11-02 15:25:36
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 73):
+	rm -f $(BIN) $(AOBJS) $(COBJS) $(MAINOBJ) ./bin/* ./obj/*
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/gif/lv_gif.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_mask.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_theme.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/sjpg/lv_sjpg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/png/lv_png.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/data/dai_power_generation.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/R61581.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_checkbox.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/time_chart.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/win_drv.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/gif/gifdec.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/animimg/lv_animimg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_stack_blur.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_rect.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_switch.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/msgbox/lv_msgbox.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/themes/default/lv_theme_default.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/fsdrv/lv_fs_stdio.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/snapshot/lv_snapshot.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/gtkdrv/gtkdrv.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/data/working_state.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_class.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_40.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_txt_ap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_style.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_bidi.o:
+#  Implicit rule search has not been done.
+ 
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/nxp_vglite/lv_draw_nxp_vglite.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_font_montserrat_20.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_indev_scroll.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/misc/lv_misc.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/swm341_dma2d/lv_draw_swm341_dma2d.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_event.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/qrcode/lv_qrcode.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/weather.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/led/lv_led.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/data/working_parameter.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_examples/src/widgets/assets/img_clothes.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/lv_drivers.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-11-16 14:45:21
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_draw.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_txt.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/png/lodepng.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/data/advanced_parameter.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_30.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/lv_extra.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_gpu_arm2d.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/quantity.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/sstardisp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/distribution.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_draw.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/power.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: default
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/78=0%
+
+# Not a target:
+lv_node/image/work_distribution.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_async.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/spinner/lv_spinner.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/tabview/lv_tabview.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/themes/basic/lv_theme_basic.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_label.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/freetype/lv_freetype.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/layouts/grid/lv_grid.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_fmt_txt.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/fout/PuHuiTi_Regular_20.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_polygon.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/data/system_overview.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/UC1610.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/lvgl.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 21:23:58
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_obj_scroll.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_table.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/libinput.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_letter.o:
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/lv_draw.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_anim_timeline.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/fsdrv/lv_fs_win32.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/running_bg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_textarea.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_38.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/libs/fsdrv/lv_fs_posix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/monkey/lv_monkey.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/arm2d/lv_draw_arm2d.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_slider.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_simsun_16_cjk.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/home_two.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/span/lv_span.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_42.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/lv_extra.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/core/lv_core.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/GC9A01.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_examples/src/widgets/lv_demo_widgets.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/SHARP_MIP.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_fs.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gpu_swm341_dma2d.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_refr.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/battery_ratio.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_group.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_26.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_examples/src/widgets/assets/img_demo_widgets_avatar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/data/mon_power_generation.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/gridnav/lv_gridnav.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_10.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_log.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/dai_power.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/ILI9341.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_unscii_8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_arc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/battery.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/layouts/flex/lv_flex.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/core/lv_disp.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_font_montserrat_16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+# Not a target:
+lv_gpu_nxp_pxp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/XPT2046.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/imgfont/lv_imgfont.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/data/device_information.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_btnmatrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/home/event.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_mask.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_style_gen.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_bg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_dejavu_16_persian_hebrew.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_18.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/jiaoliupeidian.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_indev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gpu_nxp_vglite.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/menu/lv_menu.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/home/data.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_texture_cache.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_22.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/photovoltaic.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/mouse.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/work_battery.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_gradient.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_printf.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_pos.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/sw/lv_draw_sw.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_lru.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_style_gen.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_arc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/chart/lv_chart.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_12.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_unscii_16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/image/mon_power.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_34.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/others/fragment/lv_fragment_manager.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/home/home.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_examples/src/widgets/assets/img_lvgl_logo.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/font/lv_font.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-11 20:48:08
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/fbdev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_node/ui/data/schedule.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/meter/lv_meter.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_math.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_46.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_hal_disp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/display/ST7565.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+# Not a target:
+lv_draw_sdl_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/FT5406EE8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lv_drivers/indev/xkb.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/themes/mono/lv_theme_mono.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_mem.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_arc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/extra/widgets/list/lv_list.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=263/1024=26%, Rehash=0, Collisions=116/583=20%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# General ('VPATH' variable) search path:
+# /home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/core:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/arm2d:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/nxp_pxp:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/nxp_vglite:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/sdl:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/stm32_dma2d:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/sw:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/draw/swm341_dma2d:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/font:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/hal:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/misc:/home/mai/code/lvgl/code/test/LVGL8.2_compile/lvgl/src/widgets
+
+# strcache buffers: 3 (2) / strings = 634 / storage = 16655 B / avg = 26 B
+# current buf: size = 8162 B / used = 352 B / count = 16 / avg = 22 B
+# other used: total = 16303 B / count = 618 / avg = 26 B
+# other free: total = 21 B / max = 12 B / min = 9 B / avg = 10 B
+
+# strcache performance: lookups = 721 / hit rate = 12%
+# hash-table stats:
+# Load=634/8192=8%, Rehash=0, Collisions=23/721=3%
+# Finished Make data base on Wed Jul  5 10:08:51 2023
+
+ 
