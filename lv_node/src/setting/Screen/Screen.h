@@ -14,6 +14,7 @@ typedef struct
 
 extern  lv_Brightting_data_t setting;
 
+void slider_event_cb(lv_event_t *e);
 void CreateScreen(lv_obj_t *parent);
 void add_Screen_event_cb(lv_event_t *e);
 lv_obj_t *create_page_back(lv_obj_t *obj);
