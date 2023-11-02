@@ -18,8 +18,22 @@ typedef struct
     lv_obj_t *mode_page_box; // 首页页面盒子
 
 } All_Data;
-
 extern All_Data home_data;
+typedef struct
+{
+    uint8_t brightness; //滑动条的值（外面）
+    uint32_t ScreenSaveid;
+    uint32_t Btnmid;
+    int screen_save_time;
+
+    char On_screen[8];  // 外面的亮度
+    char In_screen[8];  // 外面的亮度
+
+    
+
+} lv_setting_data_t;
+extern  lv_setting_data_t setting;
+
 
 void create_lv_layout(lv_obj_t *scr);
 

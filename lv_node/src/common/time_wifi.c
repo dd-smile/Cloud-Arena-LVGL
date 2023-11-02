@@ -36,15 +36,15 @@ static void lv_set_time(lv_timer_t *timer)
  lv_obj_t *create_wifi(lv_obj_t *parent)
 {
   lv_obj_t *wifi = lv_obj_create(parent);
-  lv_obj_set_size(wifi, 200, 75);
+  lv_obj_set_size(wifi, 250, 75);
   
-  lv_obj_align(wifi, LV_ALIGN_TOP_RIGHT, -50, -5);
+  lv_obj_align(wifi, LV_ALIGN_TOP_RIGHT, -100, -5);
   lv_obj_set_style_bg_opa(wifi, 0, LV_STATE_DEFAULT);
   lv_obj_set_style_border_opa(wifi, 0, LV_STATE_DEFAULT);
 
   lv_obj_t *wifi_img = lv_img_create(wifi);
-  lv_img_set_src(wifi_img, &Logo);
-  lv_obj_align(wifi_img, LV_ALIGN_CENTER, -30, 0);
+  lv_img_set_src(wifi_img, &lingxianjiaoyu);
+  lv_obj_align(wifi_img, LV_ALIGN_CENTER, 0, 0);
 
   return wifi;
 }

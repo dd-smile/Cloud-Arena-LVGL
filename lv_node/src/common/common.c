@@ -10,6 +10,7 @@
 
 static lv_style_t style_bg_mask;
 lv_obj_t *Textarea_Pinyin;
+lv_obj_t *InputLabel; //输入框
 char *inputVal;
 
 lv_100ask_pinyin_dict_t lv_100ask_def_pinyin[] = {
@@ -639,26 +640,25 @@ lv_obj_t *btn_create_text(lv_obj_t *parent, bool on_back, const char *confirm_te
     return confirm_btn;
 }
 
-// 点击键盘页面的添加按钮事件
-//点击键盘页面的添加按钮事件（设备名称）
-static void add_event_btn(lv_event_t *e)
-{
+// // 点击键盘页面的添加按钮事件
+// static void add_event_btn(lv_event_t *e)
+// {
+//     lv_event_code_t code = lv_event_get_code(e);
+//     lv_obj_t *obj = lv_event_get_target(e);
 
-    lv_event_code_t code = lv_event_get_code(e);
-    lv_obj_t *obj = lv_event_get_target(e);
+//     if (code == LV_EVENT_CLICKED)
+//     {
+//         // memset(add_device_list[0].device_name, 0, sizeof(add_device_list[0].device_name)); // 清空数组
+//         inputVal = lv_textarea_get_text(Textarea_Pinyin);                                              // 获取添加设备名称输入框的值
+//         printf("添加文本:%s\n", inputVal);
+//         // strcat(add_device_list[0].device_name, inputVal);                                  // 拼接字符串
+//         lv_label_set_text(Input_label, inputVal);                                             // 设置标签的值
+//         lv_obj_del(obj->parent);
+//     }
+// }
 
-    if (code == LV_EVENT_CLICKED)
-    {
-        // memset(add_device_list[0].device_name, 0, sizeof(add_device_list[0].device_name)); // 清空数组
-        inputVal = lv_textarea_get_text(Textarea_Pinyin);                                              // 获取添加设备名称输入框的值
-        printf("添加文本:%s\n", inputVal);
-        // strcat(add_device_list[0].device_name, inputVal);                                  // 拼接字符串
-        // lv_label_set_text(Input_label, inputVal);                                             // 设置标签的值
-        lv_obj_del(obj->parent);
-    }
-}
 // 创建一个点击设备名称的输入框弹出键盘的页面（带拼音的）
-lv_obj_t *lv_keypage_create(lv_obj_t *parent)
+lv_obj_t *lv_keypage_create(lv_obj_t *parent,lv_event_cb_t event_cb)
 {
     lv_obj_t *keypage = lv_obj_create(parent);
     lv_obj_set_size(keypage, 1024, 600);
@@ -669,21 +669,21 @@ lv_obj_t *lv_keypage_create(lv_obj_t *parent)
     lv_100ask_pinyin_ime_simple_test(keypage); // 创建键盘
 
     Textarea_Pinyin = lv_100ask_pinyin_ime_simple_test(keypage); // 创建键盘
-    if (Textarea_Pinyin != NULL && Input_label != NULL)
+    if (Textarea_Pinyin != NULL && InputLabel != NULL)
     {
-        char *text = lv_label_get_text(Input_label);
+        char *text = lv_label_get_text(InputLabel);
         lv_textarea_add_text(Textarea_Pinyin, text);
     }
 
     lv_obj_t *confirm_btn = btn_create_text(keypage, false, "Add", 520, 50); // 创建添加按钮
-    lv_obj_add_event_cb(confirm_btn, add_event_btn, LV_EVENT_ALL, NULL);     // 添加事件
+    lv_obj_add_event_cb(confirm_btn, event_cb, LV_EVENT_ALL, NULL);     // 添加事件
     btn_create_text(keypage, true, "Cancel", 620, 50);                       // 创建删除按钮
 
     return keypage;
 }
 
 // 创建设备名称的键盘（带拼音的）
-static lv_obj_t *lv_100ask_pinyin_ime_simple_test(lv_obj_t *parent)
+lv_obj_t *lv_100ask_pinyin_ime_simple_test(lv_obj_t *parent)
 {
     lv_obj_t *pinyin_ime = lv_100ask_pinyin_ime_create(parent);
     lv_obj_set_style_text_font(pinyin_ime, &fout_16_text, 0);
@@ -816,4 +816,27 @@ lv_obj_t *CreateOBJclick(lv_obj_t *obj)
     lv_obj_set_style_border_width(Obj, 0, LV_ALIGN_DEFAULT);
 
     return Obj;
+}
+
+
+// 创建一个弹出页面
+lv_obj_t *create_popup_page(lv_obj_t *parent, const char *title, lv_coord_t x, lv_coord_t y)
+{
+    lv_obj_t *popup_page = lv_obj_create(parent);
+    lv_obj_set_size(popup_page, 1024, 600);
+    lv_obj_align(popup_page, LV_ALIGN_BOTTOM_MID, 0, 0);
+    lv_obj_set_style_bg_color(popup_page, lv_color_hex(0x141a23), 0);
+    lv_obj_set_style_border_width(popup_page, 0, LV_STATE_DEFAULT);
+
+    lv_obj_t *Titleobj = lv_obj_create(parent);
+    lv_obj_set_size(Titleobj, 1024, 64);
+    lv_obj_align(Titleobj, LV_ALIGN_TOP_MID, 0, 0);
+    lv_obj_set_style_bg_color(Titleobj, lv_color_hex(0x1f2633), 0);
+    lv_obj_set_style_border_width(Titleobj, 0, LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(Titleobj, 0, LV_PART_MAIN);
+    lv_obj_clear_flag(Titleobj, LV_OBJ_FLAG_SCROLLABLE); // 禁用滚动条
+    card_create_24_text(Titleobj, title, x, y);
+    create_page_back(Titleobj); // 返回上一级按钮
+
+    return popup_page;
 }

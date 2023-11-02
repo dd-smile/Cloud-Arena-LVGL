@@ -187,7 +187,7 @@ serial_status_t serial_frame_recv(serial_handler_t *handler)
         {
             break;
         }
-        usleep(1000);
+        usleep(100);
     }
 
     if (lenght > 0)
@@ -229,7 +229,7 @@ serial_status_t serial_hander_init(serial_handler_t **req_handler, uint8_t port,
     serial_mutex_create(&handler->serial_mutex);
     handler->frame_recv = serial_frame_recv;
     handler->frame_send = serial_frame_send;
-    handler->respond_timeout = 1000;
+    handler->respond_timeout = 500;
     *req_handler = handler;
     return status;
 }

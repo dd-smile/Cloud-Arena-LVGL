@@ -188,18 +188,15 @@ void time_roller(lv_obj_t *parent)
     uint16_t min = timer->tm_min;
 
     // printf("%d:%02d\n", hour, min);add_time_event_cb
-    createTimeCard(parent, 30, TIME_ROLLER_YEAH, 2023);
+    // createTimeCard(parent, 30, TIME_ROLLER_YEAH, 2023);
     // printf("%d\n", t_year);
 
     lv_obj_t *roller1 = createTimeCard(parent, 30, TIME_ROLLER_YEAH, t_year - 1970);
-
     lv_roller_get_selected_str(roller1, year_buf, sizeof(year_buf));
-    // printf("Selected year: %s\n", year_buf);
     lv_obj_add_event_cb(roller1, rolleryear_event_handler, LV_EVENT_VALUE_CHANGED, NULL);
 
     lv_obj_t *roller2 = createTimeCard(parent, 130, TIME_ROLLER_MONTH, month);
     lv_roller_get_selected_str(roller2, month_buf, sizeof(month_buf));
-
     lv_obj_add_event_cb(roller2, rollermonth_event_handler, LV_EVENT_VALUE_CHANGED, NULL);
 
     lv_obj_t *roller3 = createTimeCard(parent, 230, TIME_ROLLER_DAY, day - 1);
@@ -208,7 +205,6 @@ void time_roller(lv_obj_t *parent)
 
     lv_obj_t *roller4 = createTimeCard(parent, 330, TIME_ROLLER_HOUR, hour - 1);
     lv_roller_get_selected_str(roller4, hour_buf, sizeof(hour_buf));
-
     lv_obj_add_event_cb(roller4, rollerhour_event_handler, LV_EVENT_VALUE_CHANGED, NULL);
 
     lv_obj_t *roller5 = createTimeCard(parent, 430, TIME_ROLLER_MIN, min);
@@ -225,9 +221,9 @@ static void add_time_event_cb(lv_event_t *e)
     {
         lv_obj_t *SetMask = lv_c_create_mask_box(lv_scr_act());
         lv_obj_t *iamge = image_create(SetMask, &popover, 0, 0); // 创建图标
-        card_create_24_text(iamge, "Time Settings", 10, -150);
+        card_create_24_text(iamge, "时间设置", 10, -150);
 
-        lv_obj_t *SaveButton = btn_create_text(iamge, false, "Save", 255, 300);
+        lv_obj_t *SaveButton = btn_create_text(iamge, false, "保存", 255, 300);
         lv_obj_add_event_cb(SaveButton, add_SaveButton_event_cb, LV_EVENT_ALL, NULL);
         time_roller(iamge);
     }
@@ -237,7 +233,7 @@ void CreateTime(lv_obj_t *parent)
 {
     lv_obj_t *ImageObj = CreateOBJclick(parent);
     image_create(parent, &Timming, -100, -30);
-    card_create_24_text(parent, "Time settings", 10, -30); // 创建标题
+    card_create_24_text(parent, "时间设置", 10, -30); // 创建标题
     lv_obj_add_event_cb(ImageObj, add_time_event_cb, LV_EVENT_ALL, NULL);
     create_recv_time(parent, &fout_16_text, 6, 34);
 }

@@ -39,7 +39,12 @@ extern  DevicePageData *pPageData;
 extern lv_obj_t *Input_label;
 
 
-lv_obj_t *CreateDevicePageBg(const DevicePageData *data);
 lv_obj_t *CreateBreakdownPageBg(lv_obj_t *parent);
- lv_obj_t *CreateInspectTable(lv_obj_t *parent);
+lv_obj_t *CreateInspectTable(lv_obj_t *parent);
+lv_obj_t *CreateDevicePageBg(const DevicePageData *data, uint8_t device_num);
+lv_obj_t *CreateLightsPageBg(const DevicePageData *data, uint8_t device_num);
+lv_obj_t *CreatebasketballPageBg(const DevicePageData *data, uint8_t device_num);
+lv_obj_t *CreatePartitionPageBg(const DevicePageData *data, uint8_t device_num);
+
+ 
 #endif // __DEVICE_COMMON_H__

@@ -13,9 +13,9 @@
 typedef struct {
     lv_obj_t *home_button[4];   // 设备页导航栏
     lv_obj_t *all_pages;    // 全部页面
-    lv_obj_t *office_page;  // 办公室页面
-    lv_obj_t *meeting_page; // 会议室页面
-    lv_obj_t *finance_page; // 厨房页面
+    lv_obj_t *equipment_page;  // 体育器材页面
+    lv_obj_t *circumstances_page; // 坏境控制页面
+    lv_obj_t *multimedia_page; // 多媒体控制页面
 } HomeData;
 extern HomeData device_data;    // 设备页数据
 lv_obj_t *device_page_box(lv_obj_t *parent, int num_pages, ...);

@@ -8,12 +8,13 @@ struct
   int y;
   const char *label;
 } obj_buttons[] = {
-    {&home_off, &home_on, 10, -5, "Facilities"},
-    {&mode_off, &mode_on, 10, -2, "Mode"},
-    {&setting_off, &setting_on, 10, -2, "Setting"},
+    {&home_off, &home_on, 10, -5, "设备"},
+    {&mode_off, &mode_on, 10, -2, "场景策略"},
+    {&setting_off, &setting_on, 10, -2, "设置"},
 };
 
 All_Data home_data;
+static bool enteredScreenMode = false; // 屏保标志位
 
 /*滑动页面时切换页面*/
 static void home_tileview(lv_event_t *e)
@@ -123,10 +124,56 @@ static void home_bg(lv_obj_t *obj)
   ui_navigation_main_menu(lv_detailed);
 }
 
+static void SettingScreenBack_event_cb(lv_event_t *e)
+{
+  lv_event_code_t code = lv_event_get_code(e);
+  lv_obj_t *obj = lv_event_get_target(e);
+  if (code == LV_EVENT_CLICKED)
+  {
+    lv_obj_del(obj);
+    enteredScreenMode = false;
+
+  }
+}
+static void SettingScreenBox(lv_obj_t *parent)
+{
+  lv_img_t *img_arr[] = { &Image1_big,
+                          &Image2_big,
+                          &Image3_big, 
+                          &Image4_big, 
+                          &Image5_big, 
+                          &Image6_big};
+  lv_obj_t *screensaverCard = lv_img_create(parent);
+  lv_img_set_src(screensaverCard, img_arr[setting.ScreenSaveid]);
+  lv_obj_add_flag(screensaverCard, LV_OBJ_FLAG_CLICKABLE);
+  lv_obj_add_event_cb(screensaverCard, SettingScreenBack_event_cb, LV_EVENT_CLICKED, NULL);
+  
+}
+void UpdateTask(lv_timer_t *timer)
+{
+    if(setting.screen_save_time == 0)
+    {
+      setting.screen_save_time = 60*1000;
+    }  
+    uint32_t screenModeTime = setting.screen_save_time;
+    uint32_t idle_time = lv_disp_get_inactive_time(lv_disp_get_default());
+
+    if(idle_time < 7200*1000 && idle_time >= screenModeTime && !enteredScreenMode)
+    {
+      printf("进入屏保模式%ld\n",idle_time);
+      SettingScreenBox(lv_scr_act());
+      enteredScreenMode = true;
+    }
+  
+}
+
 void create_lv_layout(lv_obj_t *scr)
 {
   pthread_t tid;
   pthread_create(&tid, NULL, ReadSerialDi, NULL);
+
+  // 读取屏幕配置文件
+  updateSettingData(&setting, SCREEN_SETTING_JSON);
 
   home_bg(scr);              // 背景图片
   home_page_box(scr);        // 框架
@@ -136,5 +183,6 @@ void create_lv_layout(lv_obj_t *scr)
   CreateModePage(home_data.mode_page);       // 模式页面
   CreateSettingPage(home_data.setting_page); // 设置页面
 
-
+  // 创建屏保任务
+  lv_timer_create(UpdateTask, 500, NULL);
 }

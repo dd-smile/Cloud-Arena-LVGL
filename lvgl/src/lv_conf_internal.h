@@ -810,7 +810,7 @@
         #ifdef CONFIG_LV_SPRINTF_USE_FLOAT
             #define LV_SPRINTF_USE_FLOAT CONFIG_LV_SPRINTF_USE_FLOAT
         #else
-            #define LV_SPRINTF_USE_FLOAT 0
+            #define LV_SPRINTF_USE_FLOAT 1
         #endif
     #endif
 #endif  /*LV_SPRINTF_CUSTOM*/
@@ -1949,7 +1949,7 @@
     #ifdef CONFIG_LV_USE_FS_STDIO
         #define LV_USE_FS_STDIO CONFIG_LV_USE_FS_STDIO
     #else
-        #define LV_USE_FS_STDIO 0
+        #define LV_USE_FS_STDIO 1
     #endif
 #endif
 #if LV_USE_FS_STDIO
@@ -1957,7 +1957,7 @@
         #ifdef CONFIG_LV_FS_STDIO_LETTER
             #define LV_FS_STDIO_LETTER CONFIG_LV_FS_STDIO_LETTER
         #else
-            #define LV_FS_STDIO_LETTER '\0'     /*Set an upper cased letter on which the drive will accessible (e.g. 'A')*/
+            #define LV_FS_STDIO_LETTER 'S'     /*Set an upper cased letter on which the drive will accessible (e.g. 'A')*/
         #endif
     #endif
     #ifndef LV_FS_STDIO_PATH
@@ -2089,7 +2089,7 @@
     #ifdef CONFIG_LV_USE_SJPG
         #define LV_USE_SJPG CONFIG_LV_USE_SJPG
     #else
-        #define LV_USE_SJPG 0
+        #define LV_USE_SJPG 1
     #endif
 #endif
 

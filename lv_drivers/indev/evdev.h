@@ -27,7 +27,7 @@ extern "C" {
 #include "lvgl.h"
 #else
 #include "lvgl/lvgl.h"
-// #include "app.h"
+#include "ui_app.h"
 #endif
 
 /*********************

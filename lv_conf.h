@@ -15,6 +15,8 @@
 
 #include <stdint.h>
 
+
+#define LV_SPRINTF_USE_FLOAT 1
 /*====================
    Graphical settings
  *====================*/
@@ -187,7 +189,7 @@ typedef void * lv_fs_drv_user_data_t;
 #endif
 
 /*1: Add a `user_data` to drivers and objects*/
-#define LV_USE_USER_DATA        0
+#define LV_USE_USER_DATA        1
 
 /*1: Show CPU usage and FPS count in the right bottom corner*/
 #define LV_USE_PERF_MONITOR     0
@@ -470,6 +472,8 @@ typedef void * lv_font_user_data_t;
  * In these languages characters should be replaced with
  * an other form based on their position in the text */
 #define LV_USE_ARABIC_PERSIAN_CHARS 0
+
+
 
 /*Change the built in (v)snprintf functions*/
 #define LV_SPRINTF_CUSTOM   0

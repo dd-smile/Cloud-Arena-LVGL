@@ -8,6 +8,8 @@
  */
 
 #include "ui_app.h"
+
+#define  MAX_PAGE  1
 HomeData device_data;
 
 /*容器事件*/
@@ -42,11 +44,13 @@ static lv_obj_t *TabviewDevicePage(lv_obj_t *obj, int num_pages, const char **ta
     lv_obj_set_style_bg_opa(tabview, 0, LV_STATE_DEFAULT);
     lv_obj_clear_flag(lv_tabview_get_content(tabview), LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_add_event_cb(lv_tabview_get_content(tabview), scroll_begin_event, LV_EVENT_CLICKED, NULL);
+    // image_create(obj,&lingxianjiaoyu,180,-265);
+    // image_create(obj,&Logo,250,-265);
 
     lv_obj_t *tab_btns = lv_tabview_get_tab_btns(tabview);
     lv_obj_set_style_bg_opa(tab_btns, 0, LV_STATE_DEFAULT);
     lv_obj_remove_style_all(tab_btns);
-    lv_obj_set_width(tab_btns, 150);
+    lv_obj_set_width(tab_btns, 120);
     lv_obj_set_height(tab_btns, 65);
 
     lv_obj_set_style_text_font(tab_btns, &PuHuiTi_Regular_20, 0);
@@ -88,9 +92,11 @@ lv_obj_t *device_page_box(lv_obj_t *parent, int num_pages, ...)
 
 void CreateHomePage(lv_obj_t *parent)
 {
-    lv_obj_t *home_tab = device_page_box(parent, 1, "Facilities"); // 设备列框架
+    lv_obj_t *home_tab = device_page_box(parent, MAX_PAGE, "设备"); // 设备列框架
 
     device_data.all_pages = lv_tileview_add_tile(lv_obj_get_child(home_tab, 0), 0, 0, LV_DIR_RIGHT); // 全部
 
     CreateDevicePage(device_data.all_pages);
+    
+    
 }

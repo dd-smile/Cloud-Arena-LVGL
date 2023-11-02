@@ -196,6 +196,14 @@
                          "58 分\n"\
                          "59 分"
 
+#define DEVICE_SENCE "Please select the scene where the device is located\n" \
+                     " Equipment\n"
+
+#define DEVICE_MODEl "Please select the device type\n" \
+                     "硬汉 YH-QF\n"                  \
+                     "Telescopic stand\n"
+
+#define DEVICE_NAME "Please enter the device name\n"
 
 #include "stdio.h"
 #include "lvgl/lvgl.h"
@@ -208,6 +216,21 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+
+typedef struct lv_device_data
+{
+    int device_id;
+    int device_num;
+    int device_type;
+    char *device_name;
+
+    lv_obj_t *page_obj;   // 页面对象
+    lv_obj_t *label_obj;  // 名字对象
+    lv_obj_t *card_obj;   // 卡片对象
+
+    struct lv_device_data *next;
+} lv_device_list_t;
+
 #include "lv_node/material/image/image.h"
 #include "lv_node/src/ui_main.h"
 #include "lv_node/src/home.h"
@@ -216,9 +239,12 @@
 #include "lv_node/src/common/time_wifi.h"
 #include "lv_node/src/device/telescopic_stand.h"
 #include "lv_node/src/device/device.h"
-#include "lv_node/src/device/SmartSeat.h"
+#include "lv_node/src/device/basketball_stands.h"
+#include "lv_node/src/device/partition_curtian.h"
+#include "lv_node/src/device/lights.h"
 #include "lv_node/src/device/device_common.h"
 #include "lv_node/src/common/common.h"
+#include "lv_node/src/common/parson.h"
 #include "lv_node/material/lv_100ask_pinyin_ime/lv_100ask_pinyin_ime.h"
 
 #include "lv_node/src/setting/Time/time_setting.h"
@@ -229,6 +255,31 @@
 #include "lv_node/serial/serial_define.h"
 #include "lv_node/serial/serial_mutex.h"
 #include "lv_node/serial/serialMain_api.h"
+#include "lv_node/src/setting/Language/Language.h"
+#include "lv_node/src/setting/Add/add_event.h"
+#include "lv_node/src/setting/Add/add_device.h"
+#include "lv_node/src/setting/Add/device_list.h"
+#include "lv_node/src/setting/disposition.h"
+
+#define DEVICE_NAME_STRLEN 128
+
+typedef enum device_types{TelescopicStand, BasketballStands, PartitionCurtain, Light} types_t;
+
+// typedef struct lv_device_data
+// {
+//     int id;
+//     types_t type;
+//     bool state;  // 设备状态，true为收起
+//     char name[DEVICE_NAME_STRLEN];
+    
+//     lv_obj_t *card_obj;   // 卡片对象
+//     lv_obj_t *img_obj;    // 示意图
+//     lv_obj_t *usr_obj;  
+
+//     struct lv_device_data *next;
+// } device_list_t;
+
+
 
 LV_FONT_DECLARE(PuHuiTi_Regular_16);
 LV_FONT_DECLARE(PuHuiTi_Regular_30);
